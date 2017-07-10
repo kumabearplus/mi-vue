@@ -56,7 +56,7 @@
 									热门
 								</span>
 							</div>
-							<img class="small-img" src="../../static/imgs/you.png">
+							<img class="small-img" src="../assets/you.png">
 						</a>	
 					</li>
 			</template>

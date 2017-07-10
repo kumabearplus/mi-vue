@@ -155,7 +155,6 @@ import $ from 'jquery'
       isEnter (menuType) {
         if (menuType) {
           this.tabItems = this[menuType]
-          console.log(this.tabItems)
           this.headerStatus = true
         } else if (menuType ==='') {
           this.headerStatus = false
@@ -195,13 +194,13 @@ import $ from 'jquery'
       >.logo {
         width: 55px;
         height: 55px;
-        background: url(../../static/imgs/mi-logo.png) no-repeat 50% 50% #ff6700;
+        background: url(../assets/mi-logo.png) no-repeat 50% 50% #ff6700;
       }
       >.pic-gif {
         width: 163px;
         height: 66px;
         margin-left: 10px;
-        background: url(../../static/imgs/boom.gif) no-repeat 50% 50%;
+        background: url(../assets/boom.gif) no-repeat 50% 50%;
       }
       >.header-nav {
         position: relative;
