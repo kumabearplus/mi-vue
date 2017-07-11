@@ -220,16 +220,11 @@ export default {
 						border-top-color: #e53935;
 					}
 					&:nth-child(5n) {
-						margin-right: -14px;
+						margin-right: -1px;
 						border-top-color: #00c0a5;
 					}	
 				}
 			}
 		}
 	}
-
-
-
-
-
 </style>

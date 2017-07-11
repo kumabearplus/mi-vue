@@ -12,7 +12,9 @@
       <GoodsCollocation/>
       <GoodsParts/>
       <GoodsAround/>
+      <Recommend/>
     </div>
+    
     
   </div>
 </template>
@@ -30,10 +32,11 @@ import GoodsIntelligence from './components/GoodsIntelligence'
 import GoodsCollocation from './components/GoodsCollocation'
 import GoodsParts from './components/GoodsParts'
 import GoodsAround from './components/GoodsAround'
+import Recommend from './components/Recommend'
 
 export default {
   name: 'app',
-  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsHome,GoodsIntelligence,GoodsCollocation,GoodsParts,GoodsAround}
+  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsHome,GoodsIntelligence,GoodsCollocation,GoodsParts,GoodsAround,Recommend}
 }
 </script>
 
