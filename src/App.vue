@@ -7,8 +7,11 @@
     <TopSub/>
     <GoodsStar/>
     <div id="main-page">
-      <GoodsCollocation/>
+      <GoodsHome/>
       <GoodsIntelligence/>
+      <GoodsCollocation/>
+      <GoodsParts/>
+      <GoodsAround/>
     </div>
     
   </div>
@@ -22,12 +25,15 @@ import TopBanner from './components/TopBanner'
 import Slide from './components/Slide'
 import TopSub from './components/TopSub'
 import GoodsStar from './components/GoodsStar'
-import GoodsCollocation from './components/GoodsCollocation'
+import GoodsHome from './components/GoodsHome'
 import GoodsIntelligence from './components/GoodsIntelligence'
+import GoodsCollocation from './components/GoodsCollocation'
+import GoodsParts from './components/GoodsParts'
+import GoodsAround from './components/GoodsAround'
 
 export default {
   name: 'app',
-  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsCollocation,GoodsIntelligence}
+  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsHome,GoodsIntelligence,GoodsCollocation,GoodsParts,GoodsAround}
 }
 </script>
 

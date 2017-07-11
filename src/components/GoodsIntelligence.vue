@@ -1,7 +1,7 @@
 <template>
   <div class="around-container">
     <div class="goods-top clearfix">
-      <h3 class="top-title">家电</h3>
+      <h3 class="top-title">智能</h3>
       <ul class="top-sub">
         <li v-for="sub in subs"
           :class="{'active': topSubStatus === sub.key}"
@@ -22,7 +22,7 @@ import GoodsRight from './GoodsRight'
 export default {
   data () {
     return {
-      topTitle: '家电',
+      topTitle: '智能',
       subs: [
         {name: '热门', key: 'hotGoods'},
         {name: '出行', key: 'outdoor'},
@@ -150,6 +150,7 @@ export default {
     width: 1226px;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 8px;
     background: #f5f5f5;
     >.goods-top {
       width: 100%;
