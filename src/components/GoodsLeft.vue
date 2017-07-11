@@ -27,7 +27,7 @@ export default {
   height: auto;
 	.goods-left-item {
 		width: 234px;
-		height: 614px;
+		height: 300px;
 		margin-bottom: 14px;
 		cursor: pointer;
 		transition: all 0.3s;
@@ -37,7 +37,6 @@ export default {
 		}
 		img {
 			width: 234px;
-			height: 614px;
 		}
 	}
 	.item-bottom {

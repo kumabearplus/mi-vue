@@ -13,12 +13,6 @@
 export default {
 	data () {
 		return {
-			subs: [
-				{name: '热门', key: 'hotGoods'},
-				{name: '耳机音响', key: 'headset'},
-				{name: '电源', key: 'power'},
-				{name: '电池存储卡', key: 'battery'}
-			],
 			topSubStatus: this.subs[0].key
 		}
 	},

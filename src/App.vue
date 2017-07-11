@@ -6,7 +6,11 @@
     <Slide/>
     <TopSub/>
     <GoodsStar/>
-    <GoodsCollocation/>
+    <div id="main-page">
+      <GoodsCollocation/>
+      <GoodsIntelligence/>
+    </div>
+    
   </div>
 </template>
 
@@ -19,10 +23,11 @@ import Slide from './components/Slide'
 import TopSub from './components/TopSub'
 import GoodsStar from './components/GoodsStar'
 import GoodsCollocation from './components/GoodsCollocation'
+import GoodsIntelligence from './components/GoodsIntelligence'
 
 export default {
   name: 'app',
-  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsCollocation}
+  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsCollocation,GoodsIntelligence}
 }
 </script>
 
@@ -33,7 +38,8 @@ export default {
   }
 
   body {
-    font-family: Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+
+    font: 14px/1.5 Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
     width: 100%;
     height: 100%;
   }
@@ -61,5 +67,10 @@ export default {
   a {
     text-decoration: none;
     color: #333;
+  }
+  #main-page {
+    width: 100%;
+    padding-top: 60px;
+    background: #f5f5f5;
   }
 </style>

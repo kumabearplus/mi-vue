@@ -53,7 +53,7 @@
 									浏览更多
 								</h3>
 								<span class="price hot">
-									热门
+									{{lastGoods.heat}}
 								</span>
 							</div>
 							<img class="small-img" src="../assets/you.png">

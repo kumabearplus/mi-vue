@@ -106,6 +106,7 @@ export default {
 		width: 1226px;
 		height: auto;
 		margin: 0 auto;
+		padding-bottom: 40px;
 		>.recommend-header {
 			position: relative;
 			.title {
@@ -154,11 +155,11 @@ export default {
 		}
 		>.recommend-wrap {
 			width: 1226px;
-			height: 310px;
+			height: 340px;
 			overflow: hidden;
 			>.recommend-content {
 				width: auto;
-				height: 300px;
+				height: 340px;
 				transition: all 0.3s;
 				.recomend-item {
 					float: left;
