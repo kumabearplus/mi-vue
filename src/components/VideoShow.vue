@@ -5,19 +5,18 @@
 			<a href="//www.mi.com/video/" target="_blank">
 				<span class="top-sub">
 					查看全部
-					<i class="sub-icon fa fa-fw fa-chevron-circle-right"></i>
+					<i class="iconfont">&#xe606;</i>
 				</span>
 			</a>
 		</div>
 		<div class="video-content">
 			<ul class="video-wrap clearfix">
 				<li class="video-item"
-					v-for="item in videos"\
-					@click="evtPlayVideo(item)">
+					v-for="item in videos">
 					<div class="item-top">
 						<img :src="item.imgUrl" alt="" />
 						<span class="play">
-							<i class="fa fa-play"></i>
+							<i class="iconfont">&#xe64a;</i>
 						</span>
 					</div>
 					<h3 class="video-title">{{item.title}}</h3>
@@ -31,54 +30,58 @@
 </template>
 
 <script>
-import GoodsHeader from './common/GoodsHeader'
 export default {
 	data () {
 		return {
 			title: '视频',
 			videos: [{
 				videoUrl: 'http://hd.mi.com/f/zt/hd/misc/youku.html?vid=XMTY1ODg5ODA0MA==',
-				imgUrl: 'http://i3.mifile.cn/a4/73d67577-cbc7-4bd0-8678-4b1e95f4f4dc',
-				title: '红米年度品牌视频',
-				desc: '一亿人喜爱你，是一种责任。'
+				imgUrl: './static/imgs/7ngy.jpg',
+				title: '听雷总讲述小米7年工艺探索之路',
+				desc: '小米6，7年工艺探索的巅峰之作'
 			},
 			{
 				videoUrl: 'http://hd.mi.com/f/zt/hd/misc/youku.html?vid=XMTY1OTg3NjQ4OA==',
-				imgUrl: 'http://i3.mifile.cn/a4/f7e434fb-8ce4-4442-bf78-0d66e409dfc3',
-				title: '小米笔记本Air最全介绍视频',
-				desc: '带独立显卡的轻薄笔记本'
+				imgUrl: './static/imgs/xm6sp.jpg',
+				title: '小米6外观设计视频',
+				desc: '震惊！小米6竟然如此之美'
 			},
 			{
 				videoUrl: 'http://hd.mi.com/f/zt/hd/misc/youku.html?vid=XMTY1OTg4NjY0OA==',
-				imgUrl: 'http://i3.mifile.cn/a4/e2df3ad8-4147-44e1-8a54-b6bcafdc6c66',
-				title: '小米笔记本Air可靠性测试视频',
-				desc: '小米笔记本Air是如何炼成的？'
+				imgUrl: './static/imgs/xm4sp.jpg',
+				title: '小米电视4 外观设计视频',
+				desc: '美哭了！史上最美的小米电视'
 			},
 			{
 				videoUrl: 'http://hd.mi.com/f/zt/hd/misc/youku.html?vid=XMTU2NDM3NjEzMg==',
-				imgUrl: 'http://i3.mifile.cn/a4/T1v3LgBTxv1RXrhCrK.jpg',
-				title: '小米Max 绝美外观视频',
-				desc: '6.44" 大屏黄金尺寸，看什么都震撼'
+				imgUrl: './static/imgs/cbds.jpg',
+				title: '4.9mm极超薄电视的诞生揭秘',
+				desc: '小米电视工程师讲述极致之作的背后故事'
 			}]
 		}
-	},
-	methods: {
-		evtPlayVideo (opts) {
-			let videoOpt = {
-				status: true,
-				title: opts.title,
-				videoUrl: opts.videoUrl
-			}
-			this.$dispatch('play', videoOpt)
-		}
-	},
-	components: {
-		'goods-header': GoodsHeader
 	}
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+	.iconfont {
+	  font-family:"iconfont" !important;
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    margin-left: 8px;
+    border-radius: 16px;
+    font-size: 10px;
+    line-height: 12px;
+    background: #b0b0b0;
+    color: #fff;
+    vertical-align: 1px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+	  font-style:normal;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
 .video-container {
 	width: 1226px;
 	height: auto;
@@ -102,14 +105,13 @@ export default {
 	  line-height: 58px;
 	  color: #424242;
 	  cursor: pointer;
-	  .sub-icon {
-	    color: #b0b0b0;
-	    font-size: 20px;
+	  .iconfont {
+	    color: #fff;
 	  }
 	  &:hover {
 	    color: #ff6700;
-	    .sub-icon {
-	      color: #ff6700;
+	    .iconfont {
+	      background: #ff6700;
 	    }
 	  }
 	}
@@ -140,10 +142,11 @@ export default {
 			height: 180px;
 		}
 		.video-title {
-			color: #333;
-			font-size: 14px;
-			font-weight: normal;
-			text-align: center;
+			margin: 0 0 6px;
+	    font-size: 14px;
+	    font-weight: 400;
+	    text-align: center;
+	    color: #333;
 		}
 		.video-desc {
 			height: 18px;
@@ -156,7 +159,10 @@ export default {
 }
 
 .item-top {
-	position: relative;
+  position: relative;
+  width: 296px;
+  height: 180px;
+  margin: 0 0 28px;
 	.play {
 		position: absolute;
 		display: block;
@@ -171,6 +177,15 @@ export default {
 		border: 2px solid #fff;
 		border-radius: 12px;
 		background: #333;
+		.iconfont {
+			background: rgba(0,0,0,0);
+			margin: 0;
+			padding: 0;
+			font-size: 10px;
+			width: 30px;
+			height: 30px;
+			line-height: 20px;
+		}
 	}
 }
 </style>

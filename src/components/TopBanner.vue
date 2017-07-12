@@ -247,7 +247,7 @@ export default {
         border: 1px solid #e0e0e0;
         box-shadow: 3px 8px 16px rgba(0,0,0,0.18);
         .detail-wrap {
-          width: 980px;
+          width: 992px;
           height: 460px;
           background: #fff;
           display: flex;

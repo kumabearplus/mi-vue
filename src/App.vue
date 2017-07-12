@@ -15,7 +15,9 @@
       <Recommend/>
       <HotProduct/>
       <GoodsContent/>
+      <VideoShow/>
     </div>
+    <FooterShow/>
     
     
   </div>
@@ -37,21 +39,23 @@ import GoodsAround from './components/GoodsAround'
 import Recommend from './components/Recommend'
 import HotProduct from './components/HotProduct'
 import GoodsContent from './components/GoodsContent'
+import VideoShow from './components/VideoShow'
+import FooterShow from './components/FooterShow'
 
 export default {
   name: 'app',
-  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsHome,GoodsIntelligence,GoodsCollocation,GoodsParts,GoodsAround,Recommend,HotProduct,GoodsContent}
+  components: {Topbar,TopHeader,TopBanner,Slide,TopSub,GoodsStar,GoodsHome,GoodsIntelligence,GoodsCollocation,GoodsParts,GoodsAround,Recommend,HotProduct,GoodsContent,VideoShow, FooterShow}
 }
 </script>
 
 <style>
   @font-face {
     font-family: 'iconfont';  /* project id 345452 */
-    src: url('//at.alicdn.com/t/font_uvivdqmtmc6p3nmi.eot');
-    src: url('//at.alicdn.com/t/font_uvivdqmtmc6p3nmi.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_uvivdqmtmc6p3nmi.woff') format('woff'),
-    url('//at.alicdn.com/t/font_uvivdqmtmc6p3nmi.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_uvivdqmtmc6p3nmi.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_h2ejx98nqnoh6w29.eot');
+    src: url('//at.alicdn.com/t/font_h2ejx98nqnoh6w29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_h2ejx98nqnoh6w29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_h2ejx98nqnoh6w29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_h2ejx98nqnoh6w29.svg#iconfont') format('svg');
   }
   html {
     width: 100%;
