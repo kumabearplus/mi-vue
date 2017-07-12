@@ -44,8 +44,6 @@ export default {
 		return {
 			currPage: 0,
 			timeId: '',
-			evtNextStatus: true,
-			evtPreStatus: true,
 			recomends: [
 				{link: 'http://item.mi.com/product/10000024.html', imgUrl: './static/imgs/xm5s-64g.png', name: '小米5s 64GB', price: '1999元', description: '“暗夜之眼”超感光相机'},
 				{link: 'http://item.mi.com/product/10000025.html', imgUrl: './static/imgs/xm5sp.png', name: '小米5s Plus', price: '2299元起', description: '5.7" 大屏双摄像头，轻薄金属机身'},

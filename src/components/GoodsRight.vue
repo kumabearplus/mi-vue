@@ -56,7 +56,8 @@
 									{{lastGoods.heat}}
 								</span>
 							</div>
-							<img class="small-img" src="../assets/you.png">
+							<span class="iconfont">&#xe620;</span>
+<!-- 							<img class="small-img" src="../assets/you.png"> -->
 						</a>	
 					</li>
 			</template>
@@ -253,6 +254,17 @@ export default {
 								}
 							}
 						}
+						.iconfont {
+	            font-family:"iconfont" !important;
+	            font-style:normal;
+	            -webkit-font-smoothing: antialiased;
+	            -moz-osx-font-smoothing: grayscale;
+	            display: block;
+							font-size: 56px;
+    					line-height: 56px;
+	            color: #ff6700;
+	            margin-left: 10px;
+	          }
 						.small-img {
 							display: block;
 							width: 80px;

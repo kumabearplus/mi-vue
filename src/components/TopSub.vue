@@ -1,15 +1,17 @@
 <template>
   <div id="top-sub">
 		<div class="sub-1">
-<!--       <ul  class="channels">
+      <ul  class="channels">
         <li v-for="channel in channels" class="channel">
           <a :href="channel.link">
-            <span class="iconfont">{{channel.icon}}</span> //Unicode码不显示图标
+            <svg class="iconfont" aria-hidden="true">
+                <use :xlink:href="`#icon-${channel.icon}`"></use>
+            </svg>
             <span class="channel-txt">{{channel.name}}</span>
           </a>
         </li>
-      </ul> -->
-			<ul class="channels">
+      </ul>
+<!-- 			<ul class="channels">
 				<li class="channel">
           <a href="http://www.mi.com/compare/" target="_blank">
   					<span class="iconfont">&#xe603;</span>
@@ -72,7 +74,7 @@
             </span>
           </a>
 				</li>
-			</ul>
+			</ul> -->
 		</div>
     <div class="subs">
       <ul class="sales">
@@ -108,12 +110,12 @@ export default {
 	data () {
 		return {
       channels: [
-        {name:'选购手机',icon:'&#xe603;',link:'https://www.mi.com/compare/'},
-        {name:'企业团购',icon:'&#xe604;',link:'http://qiye.mi.com/'},
-        {name:'一元活动',icon:'&#xe72c;',link:'https://1.hd.mi.com/'},
-        {name:'小米移动',icon:'&#xe605;',link:'https://www.mi.com/mimobile/'},
-        {name:'以旧换新',icon:'&#xe601;',link:'https://huanxin.mi.com/'},
-        {name:'话费充值',icon:'&#xe602;',link:'http://recharge.10046.mi.com/'}
+        {name:'选购手机',icon:'xuangoushouji',link:'https://www.mi.com/compare/'},
+        {name:'企业团购',icon:'liwu',link:'http://qiye.mi.com/'},
+        {name:'一元活动',icon:'lanmaofenleiyiyuangou',link:'https://1.hd.mi.com/'},
+        {name:'小米移动',icon:'tubiaozhizuomoban',link:'https://www.mi.com/mimobile/'},
+        {name:'以旧换新',icon:'yijiuhuanxin',link:'https://huanxin.mi.com/'},
+        {name:'话费充值',icon:'shoujichongzhixian',link:'http://recharge.10046.mi.com/'}
       ],
       sales: [
         {link:'https://item.mi.com/product/10000029.html',imgUrl:'./static/imgs/xmad-hm4x.jpg'},
@@ -164,6 +166,7 @@ export default {
             }
             .iconfont {
               color: #fff;
+              fill: #fff;
             }
           }
           .channel-txt {
@@ -181,11 +184,13 @@ export default {
             -moz-osx-font-smoothing: grayscale;
             display: block;
             height: 24px;
+            width: 75px;
+            fill: rgba(255, 255, 255, 0.7);
             margin-bottom: 4px;
             font-size: 24px;
             line-height: 24px;
             text-align: center;
-            color: rgba(255, 255, 255, 0.7);;
+            color: rgba(255, 255, 255, 0.7);
           }
         }
       }
