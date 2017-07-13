@@ -5,9 +5,9 @@
       <a href="https://1.hd.mi.com/" class="pic-gif"></a>
       <div class="header-nav">
         <ul class="nav-wrap">
-          <li v-for="navItem in navItems" class="item">
+          <li v-for="navItem in navItems" class="item" @mouseleave="isLeave()">
             <a href="javascript: void(0);" @mouseenter="isEnter(navItem.type)"
-              @mouseleave="isLeave()">{{navItem.name}}</a>
+              >{{navItem.name}}</a>
           </li>
         </ul>
       </div>
@@ -41,7 +41,7 @@
       v-show="headerStatus">
         <ul class="menus">
           <li class="product" v-for="tabItem in tabItems">
-            <p class="info">{{tabItem.info}}</p>
+            <p class="info" v-show="tabItem.showStatus"><span class="flag">{{tabItem.info}}</span></p>
             <a :href="tabItem.link"><img :src="tabItem.imgUrl" :alt="tabItem.name"></a>
             <p class="name">{{tabItem.name}}</p>
             <p class="price">{{tabItem.price}}</p>
@@ -90,28 +90,28 @@ import $ from 'jquery'
         ],
         tabItems: ["xiaomi","redmi","mipad","mitv","mibox","mirouter","mihardware"],
         "xiaomi": [
-          {name: '小米6', imgUrl: './static/imgs/xm6.png', link: 'https://www.mi.com/mi6/', price: '2499元起', info: '新品'},
-          {name: '小米Max 2', imgUrl: './static/imgs/max2.png', link: 'https://www.mi.com/max2/', price: '1699元起', info: '现货'},
-          {name: '小米Note 2', imgUrl: './static/imgs/xiaomiNOTE2.jpg', link: 'https://www.mi.com/minote2/', price: '2799元起', info: '立减300'},
-          {name: '小米MIX', imgUrl: './static/imgs/MIX.jpg', link: 'https://www.mi.com/mix/', price: '3499元起', info: '特惠250'},
-          {name: '小米5s Plus', imgUrl: './static/imgs/5splus.jpg', link: 'https://www.mi.com/mi5splus/', price: '2299元起', info: '立减200'},
-          {name: '小米手机5c', imgUrl: './static/imgs/mi5c.png', link: 'https://www.mi.com/mi5c/', price: '1499元起', info: '立减200'},
+          {name: '小米6', imgUrl: './static/imgs/xm6.png', link: 'https://www.mi.com/mi6/', price: '2499元起', info: '新品' ,showStatus: true},
+          {name: '小米Max 2', imgUrl: './static/imgs/max2.png', link: 'https://www.mi.com/max2/', price: '1699元起', info: '现货' ,showStatus: true},
+          {name: '小米Note 2', imgUrl: './static/imgs/xiaomiNOTE2.jpg', link: 'https://www.mi.com/minote2/', price: '2799元起', info: '立减300' ,showStatus: true},
+          {name: '小米MIX', imgUrl: './static/imgs/MIX.jpg', link: 'https://www.mi.com/mix/', price: '3499元起', info: '特惠250' ,showStatus: true},
+          {name: '小米5s Plus', imgUrl: './static/imgs/5splus.jpg', link: 'https://www.mi.com/mi5splus/', price: '2299元起', info: '立减200' ,showStatus: true},
+          {name: '小米手机5c', imgUrl: './static/imgs/mi5c.png', link: 'https://www.mi.com/mi5c/', price: '1499元起', info: '立减200' ,showStatus: true},
         ],
         "redmi": [
-          {name: '红米Note 4X', imgUrl: './static/imgs/hmn4x.jpg', link: 'https://www.mi.com/redminote4x/', price: '799元起', info: '热卖'},
-          {name: '红米4X', imgUrl: './static/imgs/hm4x.jpg', link: 'https://www.mi.com/redmi4x/', price: '699元起', info: '热卖'},
+          {name: '红米Note 4X', imgUrl: './static/imgs/hmn4x.jpg', link: 'https://www.mi.com/redminote4x/', price: '799元起', info: '热卖' ,showStatus: true},
+          {name: '红米4X', imgUrl: './static/imgs/hm4x.jpg', link: 'https://www.mi.com/redmi4x/', price: '699元起', info: '热卖' ,showStatus: true},
           {name: '红米4A', imgUrl: './static/imgs/hm4a.png', link: 'https://www.mi.com/redmi4a/', price: '599元起', info: ''},
           {name: '红米4', imgUrl: './static/imgs/hm4.jpg', link: 'https://www.mi.com/redmi4', price: '799元起', info: ''},
         ],
         "mipad": [
           {name: '小米平板3 64GB', imgUrl: './static/imgs/mipad3.png', link: 'https://www.mi.com/mipad3/', price: '1499元', info: ''},
           {name: '小米笔记本Air 12.5', imgUrl: './static/imgs/bijiben12.5.jpg', link: 'https://www.mi.com/mibookair-12/', price: '3599元', info: ''},
-          {name: '小米笔记本Air 13.3', imgUrl: './static/imgs/bijiben13.3.jpg', link: 'https://www.mi.com/mibookair/', price: '4999元', info: '新品'}
+          {name: '小米笔记本Air 13.3', imgUrl: './static/imgs/bijiben13.3.jpg', link: 'https://www.mi.com/mibookair/', price: '4999元', info: '新品' ,showStatus: true}
         ],
         "mitv": [
-          {name: '小米电视4 49英寸', imgUrl: './static/imgs/xmds_49.png', link: 'https://www.mi.com/mitv4/49/', price: '3499元', info: '新品'},
-          {name: '小米电视4 55英寸', imgUrl: './static/imgs/xmds_55.png', link: 'https://www.mi.com/mitv4/55/', price: '3999元起', info: '新品'},
-          {name: '小米电视4 65英寸', imgUrl: './static/imgs/xmds_65.png', link: 'https://www.mi.com/mitv4/65/', price: '9999元', info: '新品'},
+          {name: '小米电视4 49英寸', imgUrl: './static/imgs/xmds_49.png', link: 'https://www.mi.com/mitv4/49/', price: '3499元', info: '新品' ,showStatus: true},
+          {name: '小米电视4 55英寸', imgUrl: './static/imgs/xmds_55.png', link: 'https://www.mi.com/mitv4/55/', price: '3999元起', info: '新品' ,showStatus: true},
+          {name: '小米电视4 65英寸', imgUrl: './static/imgs/xmds_65.png', link: 'https://www.mi.com/mitv4/65/', price: '9999元', info: '新品' ,showStatus: true},
           {name: '小米电视4A 43英寸', imgUrl: './static/imgs/xmds4a_43.png', link: 'https://www.mi.com/mitv4A/43/', price: '2099元', info: ''},
           {name: '小米电视4A 49英寸', imgUrl: './static/imgs/xmds4a_49.png', link: 'https://www.mi.com/mitv4A/49/', price: '2599元', info: ''},
           {name: '查看全部', imgUrl: './static/imgs/70dianshi.png', link: 'https://www.mi.com/mitv4A/49/', price: '小米电视', info: ''}
@@ -125,17 +125,17 @@ import $ from 'jquery'
         ],
         "mirouter": [
           {name: '小米路由器 HD/Pro', imgUrl: './static/imgs/HD-Pro.png', link: 'https://www.mi.com/miwifihd/', price: '499元起', info: ''},
-          {name: '小米路由器 3G', imgUrl: './static/imgs/3G.png', link: 'https://www.mi.com/miwifi3g/', price: '249元', info: '新品'},
-          {name: '小米路由器 3', imgUrl: './static/imgs/xmlyq3.png', link: 'https://www.mi.com/miwifi3/', price: '149元起', info: '包邮'},
-          {name: '小米路由器 3C', imgUrl: './static/imgs/3C.png', link: 'https://www.mi.com/miwifi3c/', price: '99元', info: '包邮'},
+          {name: '小米路由器 3G', imgUrl: './static/imgs/3G.png', link: 'https://www.mi.com/miwifi3g/', price: '249元', info: '新品' ,showStatus: true},
+          {name: '小米路由器 3', imgUrl: './static/imgs/xmlyq3.png', link: 'https://www.mi.com/miwifi3/', price: '149元起', info: '包邮' ,showStatus: true},
+          {name: '小米路由器 3C', imgUrl: './static/imgs/3C.png', link: 'https://www.mi.com/miwifi3c/', price: '99元', info: '包邮' ,showStatus: true},
           {name: '小米WiFi电力猫', imgUrl: './static/imgs/dlm.png', link: 'https://www.mi.com/plc/', price: '249元', info: ''},
           {name: '小米WiFi放大器 2', imgUrl: './static/imgs/fdq2.jpg', link: 'https://item.mi.com/1164700010.html', price: '49元', info: ''}
         ],
         "mihardware": [
           {name: '小米体脂秤', imgUrl: './static/imgs/tzc.jpg', link: 'https://www.mi.com/scale2/', price: '199元', info: ''},
-          {name: '小米手环2', imgUrl: './static/imgs/sh2.png', link: 'https://www.mi.com/shouhuan2/', price: '149元', info: '包邮'},
-          {name: '小米净水器', imgUrl: './static/imgs/jsqcs.png', link: 'https://www.mi.com/water3/', price: '1499元起', info: '新品'},
-          {name: '小米VR眼镜 PLAY2', imgUrl: './static/imgs/xmvrplay2.png', link: 'https://www.mi.com/mivr2c/', price: '99元', info: '新品'},
+          {name: '小米手环2', imgUrl: './static/imgs/sh2.png', link: 'https://www.mi.com/shouhuan2/', price: '149元', info: '包邮' ,showStatus: true},
+          {name: '小米净水器', imgUrl: './static/imgs/jsqcs.png', link: 'https://www.mi.com/water3/', price: '1499元起', info: '新品' ,showStatus: true},
+          {name: '小米VR眼镜 PLAY2', imgUrl: './static/imgs/xmvrplay2.png', link: 'https://www.mi.com/mivr2c/', price: '99元', info: '新品' ,showStatus: true},
           {name: '米家IH电饭煲', imgUrl: './static/imgs/dfb.jpg', link: 'https://www.mi.com/dianfanbao2/', price: '399元', info: ''},
           {name: '查看全部', imgUrl: './static/imgs/air2.jpg', link: 'https://www.mi.com/smart/', price: '智能硬件', info: ''}
         ]
@@ -209,6 +209,7 @@ import $ from 'jquery'
           height: 88px;
           line-height: 88px;
           >.item {
+            font-size: 16px;
             padding: 0 10px;
             &:hover a {
               color: #ff6700;
@@ -347,8 +348,9 @@ import $ from 'jquery'
         margin-left: auto;
         display: flex;
         li {
+          position: relative;
           width: 180px;
-          padding: 5px 10px;
+          padding: 35px 12px 0;
           text-align: center;
           a {
             padding: 0 10px;
@@ -360,9 +362,20 @@ import $ from 'jquery'
             }
           }
           >.info {
-            height: 18px;
-            padding: 1px 20px;
-            color: #ff6700;
+            position: absolute;
+            top: -1px;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+            .flag {
+              display: inline-block;
+              height: 18px;
+              padding: 1px 20px;
+              border: 1px solid #ff6700;
+              color: #ff6700;
+            }
           }
           >a {
             margin: 5px auto 16px;
